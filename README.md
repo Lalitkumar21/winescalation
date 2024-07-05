@@ -1,0 +1,2 @@
+# winescalation
+Windows Privilege Escalation
