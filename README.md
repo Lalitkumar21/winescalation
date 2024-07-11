@@ -78,4 +78,13 @@ powershell_execurte Invoke_powerup(can cause problem to use  for powerups
 powershell_import PrivescCheck.ps1
 powershell_execurte Invoke_PrivescCheck
 
-3.
+3.WinPeas(install from github)
+upload winpeasx64.exe(on meterpreter)
+shell
+winpeasx64.exe
+
+
+4.Beroot(install from github )
+upload beRoot.exe
+shell 
+beroot.exe
