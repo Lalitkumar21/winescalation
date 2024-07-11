@@ -88,3 +88,9 @@ winpeasx64.exe
 upload beRoot.exe
 shell 
 beroot.exe
+
+#Priviege Escalataion
+->Based on enumeration we will exploit the machine.
+
+Mitigation:
+Based on vulnearabilities , different mitigation should be applied
