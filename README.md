@@ -59,4 +59,8 @@ PayloadAllThings
 ->Now we can try poetential ways to privilage escalation over the system to be a administrative user
 ->Many automation scripts
 
-
+Practical part
+shell
+net localgroup administrators -> got  all users
+net user "username"
+exit
