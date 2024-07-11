@@ -9,6 +9,7 @@ Example - Login to website with someone's account
 2 types:
 
 1.Horizontal priv escalation - When 1st users got access to other account via any username or password or via any other method and login or work as 2nd user.
+
 2.Vertical priv escalation - When user able to perform any activity on behalf of administrator.
 
 I Gaining Initial Access 
