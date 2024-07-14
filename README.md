@@ -2,9 +2,16 @@
 Windows Privilege Escalation
 
 Intro:
-Gaining unauthorized access to your windows and gaining more control than what is typically allowed. It is possible due to weakness or vulnerability in the system.
+A cyberattack technique for Gaining unauthorized access to your windows and gaining more control or higher privileges than what is typically allowed. It is possible due to weakness or vulnerability in the system.
 
 Example - Login to website with someone's account
+
+AIM:
+->Gain administrative control
+->Access restricted resources
+->Maintain persistence
+->Expand lateral movement
+->Evade detection and security measures
 
 2 types:
 
