@@ -1,10 +1,13 @@
 # winescalation
 Windows Privilege Escalation
 
+
 Intro:
 A cyberattack technique for Gaining unauthorized access to your windows and gaining more control or higher privileges than what is typically allowed. It is possible due to weakness or vulnerability in the system.
 
+
 Example - Login to website with someone's account
+
 
 AIM:
 ->Gain administrative control
@@ -13,19 +16,26 @@ AIM:
 ->Expand lateral movement
 ->Evade detection and security measures
 
+
 2 types:
 
+
 1.Horizontal priv escalation - When 1st users got access to other account via any username or password or via any other method and login or work as 2nd user.
+
 
 2.Vertical priv escalation - When user able to perform any activity on behalf of administrator.
 
 I) Gaining Initial Access 
 
+
 ->It basically requires some type of privilages in your hand.
+
 
 ->Once we have initial access we can then perform enumeration to identify vulnerabilities that can allow us to do privilage escalation.
 
+
 nmap -p- -A ipofdevice -oN nmap.txt --min-rate 10000
+
 
 If FTP anonumous service is allowed
 If no file found or not found anything , try to put some file from your system
